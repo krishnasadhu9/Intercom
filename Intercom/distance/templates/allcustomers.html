@@ -1,0 +1,71 @@
+<html lang="en">
+<body>
+  <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td, th {
+            border: 0.6px solid #dddddd;
+            text-align: left;
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+
+
+
+<p>
+  <meta charset="utf-8">
+  <table>
+
+            <tbody>
+
+              <tr><br>
+                      <h3 style="font-size: large" ><b>ALL CUSTOMERS</b>
+              </h3></tr>
+                {% for customer in customer %}
+                <tr>
+                    <td><b> User ID: </b> </td>
+                    <td>{{ customer.user_id }}<br></td>
+                </tr>
+                <tr>
+                    <td><b> Name </b> </td>
+                    <td>{{ customer.name }}<br></td>
+                </tr>
+                <tr>
+                    <td><b>latitude:</b></td>
+                    <td> {{ customer.latitude }}<br></td>
+                  </tr>
+                  <tr>
+                    <td><b>Longitude:</b></td>
+                    <td> {{ customer.longitude }}<br></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Distance from DUBLIN INTERCOM:</b></td>
+                    <td> {{ customer.Distance }} km<br></td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+
+                {% endfor %}
+              </tbody>
+
+        </table>
+        </p>
